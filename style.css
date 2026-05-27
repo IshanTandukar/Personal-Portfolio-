@@ -597,6 +597,7 @@ textarea {
   margin-bottom: 1rem;
   text-align: center;
   font-weight: 600;
+  transition: opacity 0.5s ease;
 }
 
 @media (max-width: 768px) {
