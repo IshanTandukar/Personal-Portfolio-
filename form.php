@@ -25,13 +25,15 @@ $stmt = $conn->prepare("INSERT INTO registration (firstName, lastName, email, nu
 if ($stmt === false) {
     die("Error preparing statement: " . $conn->error);
 }
-$stmt->bind_param("sssds", $firstName, $lastName, $email, $number, $message);
+// $stmt->bind_param("sssds", $firstName, $lastName, $email, $number, $message);
+$stmt->bind_param("sssss", $firstName, $lastName, $email, $number, $message);
 
 // Execute the statement
 if ($stmt->execute()) {
     // Redirect to the HTML form or another page with a success query parameter
-    header("Location: index.html?status=success");
-    echo "Registration successful";
+    // header("Location: index.html?status=success");
+    // echo "Registration successful";
+    echo "success";
     exit(); // Ensure no further code is executed after the redirect
 } else {
     echo "Error: " . $stmt->error;
