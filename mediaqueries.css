@@ -111,7 +111,17 @@
     gap: 2rem;
   }
 
-  .about-containers {
+  .section-container .about-containers {
+    display: flex;
+    /* flex: 1; */
+    /* align-items: center; */
+    flex-direction: column;
+  }
+
+  .experience-details-container .about-containers {
+    display: flex;
+    flex: 1;
+    align-items: center;
     flex-direction: column;
   }
 
